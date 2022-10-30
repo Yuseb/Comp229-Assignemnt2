@@ -1,0 +1,52 @@
+<!--
+File name: list.ejs 
+Student’s Name: Yusuf Esad Bilgic
+StudentID: 301166614
+Date: October 30th, 2022
+-->
+<%- include('../partials/header.ejs') %>
+
+    <%- include('../partials/main_nav.ejs') %>
+        <%- include('../partials/page_header') %>
+
+            <br>
+            <main class="container">
+                <div class="row">
+                    <div class="col-md-offset-3 col md-8">
+                        <a href="/contactList/add" class="btn btn-primary" role="button">
+                            <i class="fas fa-plus-circle"></i>Add a contact</a>
+                        <br>
+                        <br>
+                        <table class="table table-bordered table-striped table-hover">
+                            <tr>
+                                <th class="text-content col-2 text-white">Name</th>
+                                <th class="text-content col-2 text-white">Number</th>
+                                <th class="text-content col-1 text-white">Email</th>
+                            </tr>
+                            <% for(let count=0; count<contact.length; count++){ %>
+                                <tr>
+                                    <td class="text-center col-2 text-white">
+                                        <%=contact[count].contact_name%>
+                                    </td>
+                                    <td class="text-center col-2 text-white">
+                                        <%=contact[count].contact_number%>
+                                    </td>
+                                    <td class="text-center col-1 text-white">
+                                        <%=contact[count].contact_email%>
+                                    </td>
+                                    <td class="text-center col-1"><a href="/contactList/edit/<%=contact[count]._id%>"
+                                            class="btn btn-primary"><i class="fas fa-pencil-alt"></i>Update</a></td>
+                                    <td class="text-center col-1"><a href="/contactList/delete/<%=contact[count]._id%>"
+                                            class="btn btn-danger"><i class="fas fa-trash-alt"></i>Delete</a></td>
+                                </tr>
+                                <%}%>
+                        </table>
+
+                    </div>
+                </div>
+            </main>
+
+            <%- include('../partials/bottom_nav') %>
+                    
+
+                        <%- include('../partials/footer') %>

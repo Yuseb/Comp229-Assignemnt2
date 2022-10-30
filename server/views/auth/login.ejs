@@ -1,0 +1,56 @@
+<!--
+File name: login.ejs 
+Student’s Name: Yusuf Esad Bilgic
+StudentID: 301166614
+Date: October 30th, 2022
+-->
+<%- include('../partials/header.ejs') %>
+    <%- include('../partials/main_nav.ejs') %>
+        <%- include('../partials/page_header') %>
+
+        
+        <main class="container">
+
+            <br>
+            <br>
+             <!--message Area-->
+             <%if(message.length>0){%>
+                <div class="alert alert-danger">
+                    <%=message%>
+                </div>
+                <%}%>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <form id="form" name="myForm" class="form" autocomplete="off"  method="POST" onsubmit="return validateForm()">
+        
+                        <!--Username-->
+                        <div class="form-group form-row">
+                            <label class="form-label" id="usernameLabel" for="username"></label>
+                            <input type="text" class="form-control transparent-input" id="username" name="username" placeholder="Username" tabindex="1">
+                        </div>
+
+                        <!-- Password-->
+                        <div class="form-group">
+                            <label class="form-label" id="passwordLabel" for="password"></label>
+                            <input type="password" class="form-control transparent-input" id="password" name="password" placeholder="Password" tabindex="2">
+                            <a id="register-button"href="/register">Register</a>
+                        </div>
+        
+                        <div class="text-center margin-top-25 submitButton">
+                            <!-- <button type="submit" class="btn btn-mod btn-border btn-large">Login</button> -->
+                            <input type="submit" class="btn btn-mod btn-border btn-large" value="login">
+                            <a href="/">
+                                <input type="button" class="btn btn-mod btn-border btn-large" value="cancel">
+                            </a>
+                        </div>
+        
+                    </form>
+                  
+                </div>
+        
+            </div>
+            
+          </main>
+
+            <%- include('../partials/bottom_nav') %>
+                        <%- include('../partials/footer') %>

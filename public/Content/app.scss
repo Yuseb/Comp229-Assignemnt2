@@ -1,0 +1,79 @@
+
+@import "variables";
+html{
+  min-height: 100% !important;
+  overflow-y: auto;
+  height: 0px;
+}
+
+
+body {
+  background-color: $gitBlue;
+  color: white;
+  text-align: center;
+  
+  min-height: 100%;
+  h3, h1 {
+    letter-spacing: 10px
+  }
+
+
+  nav{
+    height: 4em;
+    @media only screen and (max-width:640px) {
+      height:6em;
+      background-color: $gitBlue;
+      background: solid;
+    }
+  }
+}
+header{
+  z-index: 1;
+}
+.contact-div-wrapper{
+  width: 30em;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba($mainBlue, $alpha: 0.05);
+  padding: 10px;
+  border-radius: 20px 20px ;
+  height: 30em;
+  line-height: 3em;
+  margin-left: auto;
+  margin-right: auto;
+  border: 0.01em solid $mainBlue;
+  box-shadow: 0.5em 0.5em $mainBlue !important;
+  overflow: auto;
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  
+}
+
+.projects{
+  h3{
+    letter-spacing: 0px !important;
+  }
+}
+
+
+.sm-width-wrapper{
+    zoom:80%;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.garnett-headshot{
+  margin: -2em;
+}
+
+#home-subheading{
+  position: absolute; left:47%; top: 50%;
+  @media screen and (min-width: 380px) and (max-width: 1000px){
+    position: absolute; left:37%; top: 40%;
+}
+}
+

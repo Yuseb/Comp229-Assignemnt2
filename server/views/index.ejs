@@ -1,0 +1,38 @@
+<!--
+File name: index.ejs 
+Student’s Name: Yusuf Esad Bilgic
+StudentID: 301166614
+Date: October 30th, 2022
+-->
+<%- include('partials/header.ejs') %>
+<%- include('partials/main_nav.ejs') %>
+<%- include('partials/header.ejs') %>
+  
+
+  <main class="container">
+    <div class="jumbotron">
+      <div style="width: 100%; overflow: hidden;">
+        
+        <div class="vertical-center">
+          <img src="Assets\images\yusuf.JPG" alt="yusuf_bilgic" height="200" style="float:right; margin: 0px 0px 15px 15px;" >
+          <div style=" text-align: center;">
+            
+            <div>
+              <h1 class="display-4" style="font-size: 30px; text-align:center">&nbsp;&nbsp;<b>Welcome to the <%= title %> Page! </b></h1>
+              <br>
+                <p> My name is Yusuf Esad Bilgic. <br> Student Id: 301166614<br> Comp229-Web Application Development<br> Assignment 2 - Express Portfolio Site </p>
+              <br>
+                <div style="display: flex;">
+                <a href=".\aboutme"><button type="button" class="btn btn-primary btn-sm">About Me!</button></a>
+                <p> &nbsp;&nbsp;   Click the button to view my about page!</p><br><br>
+                </div>
+                
+                <div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+    <%- include('partials/bottom_nav.ejs') %>
+      <%- include('partials/footer.ejs') %>

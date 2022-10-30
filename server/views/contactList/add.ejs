@@ -1,0 +1,46 @@
+<!--
+File name: add.ejs 
+Student’s Name: Yusuf Esad Bilgic
+StudentID: 301166614
+Date: October 30th, 2022
+-->
+<%- include('../partials/header.ejs') %>
+
+    <%- include('../partials/main_nav.ejs') %>
+        <%- include('../partials/page_header') %>
+
+
+            <!--content for the Add page-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <form class="form" method="POST">
+                            <div class="form group">
+                                <label for="nameTextField">Contact Name</label>
+                                <input type="text" class="form control transparent-input" id="name"
+                                    placeholder="Enter the Contact Name" name="name" required>
+                            </div><br>
+
+                            <div class="form group">
+                                <label for="authorTextField">Contact Number</label>
+                                <input type="text" class="form control transparent-input" id="number"
+                                    placeholder="Enter the Contact Number" name="number" required>
+                            </div><br>
+
+                            <div class="form group">
+                                <label for="publishedTextField">Contact Email</label>
+                                <input type="text" class="form control transparent-input" id="publishedTextField"
+                                    placeholder="Enter the contact Email" name="email" required>
+                            </div><br>
+
+                            <button class="btn btn-primary" type="submit"><i class="fas fa-pen-to-square"></i>submit</button>
+                            <a href="/contactList" class="btn btn-warning"><i class="fas fa-arrow-rotate-left"></i>cancel</a>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <%- include('../partials/bottom_nav') %>
+
+                        <%- include('../partials/footer') %>
